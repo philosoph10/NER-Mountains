@@ -214,7 +214,8 @@ if __name__ == '__main__':
     # 2. mask out the padded labels
     data_collator = DataCollatorForTokenClassification(tokenizer=tokenizer)
 
-    train_model(model, tokenizer, tokenized_train, tokenized_val, data_collator, epochs=0.01)
+    # the exact num_epochs which was used to train the final model
+    train_model(model, tokenizer, tokenized_train, tokenized_val, data_collator, epochs=4)
 
     if save_dir is not None:
         # create the directory if not exists
