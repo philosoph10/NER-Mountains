@@ -52,6 +52,21 @@ The repository contains the following files:
 - **inference.py:** Python script for performing inference. Accepts the following arguments:
   - `--input-path:` Path to a TXT file for model input.
   - `--output-path:` Directory to store the output file.
+ 
+To train the model, run the following script:
+
+```bash
+python training.py --save-dir path/to/model/for/saving
+```
+- `--save-dir`: Path to the directory for saving.' (optional).
+
+```bash
+python inference.py --model-path path/to/model --tokenizer-path path/to/tokenizer --input-path path/to/your/file.txt --output-path path/to/saving/directory
+```
+- `--model-path`: Path to the model for inference.' (optional, the trained model is used by default).
+- `--tokenizer-path`: Path to the tokenizer for the model.' (optional).
+- `--input-path`: Path to TXT file for inference' (required).
+- `--output-path`: Path to directory in which to store the output file' (optional, current directory by default).
 
 The output will be a TXT file with all the mountain names enclosed into \<mountain\> tag, in XML style.
 
